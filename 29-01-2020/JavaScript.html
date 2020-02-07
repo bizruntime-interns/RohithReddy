@@ -1,0 +1,42 @@
+﻿<html>
+<body>
+<p id="demo"></p>
+<p id="d"></p>
+<p id="de"></p>
+<p id="dem"></p>
+<script>
+var x, y, sum,sub,mul,div;  
+x = 5; 
+y = 6; 
+sum = x + y;
+sub = x - y;
+mul = x * y;
+div = x / y;
+
+document.getElementById("demo").innerHTML =
+"Sum is " + sum + ".";
+document.getElementById("d").innerHTML =
+"Subtraction is " + sub + ".";
+document.getElementById("de").innerHTML =
+"Mul is " + mul + ".";
+document.getElementById("dem").innerHTML =
+"Division  is " + div + "."
+;  
+</script>
+
+<button onclick="myFunction()">Sort</button>
+<p id="rohi"></p>
+
+<script>
+var fruits = ["Banana","Haste", "Orange", "Apple", "Mango","Cherry","Fig","Dragonfruit","Grapes","India","Elachi"];
+document.getElementById("rohi").innerHTML = fruits;
+
+function myFunction() {
+  fruits.sort();
+  document.getElementById("rohi").innerHTML = fruits;
+}
+</script>
+
+</body>
+
+</html>
