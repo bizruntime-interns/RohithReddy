@@ -1,0 +1,52 @@
+<html>
+<head>
+<h3><center>JavaScript HTML Events</center></h3>
+<script>
+function Event1() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+<script>
+  function Event2(x) {
+  x.style.background = "grey";
+}
+</script>
+
+</head>
+
+<script>
+    function message(){
+    alert("Do you want to reset your text field");
+}
+</script>
+
+<script>
+    function submit(){
+        alert("You will now  be redirected to Google page.");
+    }
+    </script>
+
+<body style=background-color:grey>
+<center>
+Your Name:<input type="text" id="fname" onblur="Event1()">
+<br><br>
+</body>
+
+Native Place:<input type="text" onfocus="Event2(this)">
+<form onreset="message()">
+<br>
+Enter your name: <input type="text" size="20">
+<input type="reset">
+</form>
+<br>
+
+<form onsubmit="submit()" action="C:\Users\Dell\source\repos\loginpage.html">
+Enter Your Name:<input type="text" size="20">
+<input type="submit">
+</form>
+
+
+</center>
+</html>

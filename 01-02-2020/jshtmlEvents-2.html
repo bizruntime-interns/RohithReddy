@@ -1,0 +1,83 @@
+<html>
+<body class="back">
+<center>
+
+<style>
+body,html{
+    height: 100%;
+    margin:0%;
+}
+
+.back{
+    background-image: url("captain.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.textcolor{
+    color:white;
+}
+.form{
+    background-image: url("spider.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40%;
+}
+.form{
+    left:65%;
+    top:65%;
+    margin-left: -25%;
+    position: absolute;
+    margin-top: -25%;
+}
+</style>
+
+<form name="loginForm" method="post" id="form" action="spider.jpg">
+    <table width="20%" bgcolor="grey" class="form" align="center">
+    
+    <tr>
+    <td colspan=2><center><font size=4 color="white"><b>Intern Login</b></font></center></td>
+    </tr>
+    
+    <tr>
+    <td> <b><font color="white">Username:</b></td></font>
+    <td><input type="text" size=25 id="userid"></td>
+    </tr>
+    
+    <tr>
+        <td> <b><font color="white">Password:</b></td></font>
+        <td><input type="Password" size=25 id="pwd"></td>
+    </tr>
+
+    <tr>
+        <td> <b><font color="white">Mobile No:</b></td></font>
+        <td><input type="nubers" maxlength="10" ></td>
+    </tr>
+    
+    <tr>
+    <td><input type="Reset"></td>
+    <td><input type="submit" onclick="return check(this.form)" value="Login"></td>
+    </tr>
+    
+    </table>
+    </form>
+    <script>
+    function check(form)
+    {
+    
+    if(form.userid.value == "Rohith" && form.pwd.value == "1234")
+    {
+        return true;
+    }
+    else
+    {
+        alert("Error in Password/Username")
+        return false;
+    }
+    }
+    </script>
+
+</center></body>
+</html>

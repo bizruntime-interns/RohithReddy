@@ -1,0 +1,50 @@
+<html>
+    <head><center><u><h2 style="color:blue">Display Output in table format.</h2></u></center></head>
+    <style>
+        table,th,td{
+    border:1px grey;
+    border-collapse:collapse;
+}
+th,td{
+    padding:10px;
+}
+    </style>
+    <body>
+        <h2>XMLHttpRequest Object in table format.</h2>
+        <button type="button" onclick="load()">Get My Songs Collections</button>
+        </body></br></br>
+        <table id="demo">
+            <script>
+                
+ function load() {
+ var xhttp = new XMLHttpRequest(); 
+ xhttp.onreadystatechange = function() {
+ if (this.readyState == 4 && this.status == 200) {
+ document.getElementById("demo").innerHTML = this.responseText;
+  }
+  };
+ xhttp.open("GET", "data.xml", true);
+ xhttp.send();
+}    
+function songs(){
+    var i;
+    var xmlDoc = xml.responseXML;
+    var table ="<tr><th>Title</th></tr>";
+    var x = xmlDoc.getElementByTagName("songs");
+    for(i=0;i<x.length;i++){
+        table += "<tr><td>" +
+    x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("artist")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+
+
+            </script>
+
+
+        </table>
+    </body>
+</html>

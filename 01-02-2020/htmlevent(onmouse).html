@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <center><h1 class="textcolor">JavaScript Html Events</h1></center>
+    </head>
+    <div class ="background" onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:black;
+color:white;
+width:fit-content;
+height:50px;
+padding:20px;">
+Mouse Over Me
+</div>
+<h1 onmouseover="style.color='blue'" 
+onmouseout="style.color='Grey'">
+Place the curser on Me!</h1>
+
+<script>
+    function mOver(obj) {
+      obj.innerHTML = "This is an event in JavaScript"
+    }
+    
+    function mOut(obj) {
+      obj.innerHTML = "Curser On Me!"
+    }
+    </script>
+    	<script>
+            function ShowMessage(firstName, lastName) {
+                alert("Hello sir!  " + firstName + " " + lastName);
+            }
+    
+            ShowMessage("Rohith", "Reddy");
+            ShowMessage("Shree", "Rakesh");
+            ShowMessage("Rahul","Reddy");
+    
+        </script>
+        
+
+</html>
